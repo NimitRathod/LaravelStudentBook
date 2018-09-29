@@ -21,8 +21,6 @@
             <th>Name</th>
             <th>EMail</th>
             <th>Address</th>
-            <th>Edit</th>
-            <th>Delete</th>
           </tr>
         </thead>
         <tbody>
@@ -31,12 +29,6 @@
             <td>{{ $user->name }}</td>
             <td>{{ $user->email }}</td>
             <td>{{ $user->address }}</td>
-            <td>
-              <a href="{{url('/student/' . $user->id . '/edit') }}" class="btn btn-info">Edit</a>
-            </td>
-            <td>
-              <a href="" class="btn btn-danger">Delete</a>
-            </td>
           </tr>      
           @endforeach
         </tbody>
