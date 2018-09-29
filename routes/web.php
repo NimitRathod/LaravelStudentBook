@@ -23,4 +23,9 @@ Route::get('/', function () {
 
 // 09_22
 // Resource
-Route::resource('/student', 'date_09_22\StudentProfileController');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('/student', 'date_09_22\StudentProfileController')->middleware('auth');
